@@ -1,0 +1,59 @@
+{
+  "id": "idea-tracker",
+  "name": "Idea Tracker",
+  "description": "Durably capture, organize, annotate, and advance ideas without turning them into projects automatically.",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "databasePath": {
+        "type": "string",
+        "description": "Absolute or OpenClaw-state-relative SQLite path."
+      }
+    },
+    "additionalProperties": false
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "contracts": {
+    "tools": [
+      "idea_add",
+      "idea_update",
+      "idea_transition",
+      "idea_status",
+      "idea_note_add",
+      "idea_note_update",
+      "idea_note_delete",
+      "idea_link_add",
+      "idea_link_remove",
+      "idea_summary"
+    ]
+  },
+  "toolMetadata": {
+    "idea_add": {
+      "sideEffecting": true
+    },
+    "idea_update": {
+      "sideEffecting": true
+    },
+    "idea_transition": {
+      "sideEffecting": true
+    },
+    "idea_note_add": {
+      "sideEffecting": true
+    },
+    "idea_note_update": {
+      "sideEffecting": true
+    },
+    "idea_note_delete": {
+      "sideEffecting": true
+    },
+    "idea_link_add": {
+      "sideEffecting": true
+    },
+    "idea_link_remove": {
+      "sideEffecting": true
+    }
+  }
+}
